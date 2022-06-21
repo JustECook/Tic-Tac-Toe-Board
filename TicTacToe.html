@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        box-shadow: 5px 5px 10px black;
+    }
+
+    h1, h2 {
+        position: relative;
+        padding: 0px;
+    }
+    .textBox {
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    p {
+        font-size: 120px;
+    }
+</style>
+
+</head>
+<body>
+    <div class = "title">
+    <h1>Game Board</h1>
+</div>
+<div class = "spacer"></div>
+    <div class = "container">
+        <div class = "textBox"><p>X</p></div>
+        <div class = "textBox"><p>O</p></div>
+        <div class = "textBox"></div>
+        <div class = "textBox"></div>
+        <div class = "textBox"><p>X</p></div>
+        <div class = "textBox"></div>
+        <div class = "textBox"><p>O</p></div>
+        <div class = "textBox"></div>
+        <div class = "textBox"><p>X</p></div>
+    </div>
+    
+</body>
+</html>
