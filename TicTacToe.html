@@ -19,8 +19,8 @@
     }
     .container {
         display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 3fr 3fr 3fr;
         box-shadow: 5px 5px 10px black;
     }
 
@@ -69,28 +69,27 @@
     #horizontal-top {
         position: absolute;
         display: none;
-        top: 225px;
-        width: 575px;
+        top: 325px;
+        width: 700px;
         height: 10px;
         background: red;
     }
 
-    .textBox {
-        border: 1px solid black;
-        height: 200px;
-        width: 200px;
+    p {
+        font-size: 120px;
+    }
 
+    .square {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
     }
 
     .title {
         text-align: center;
-    }
-
-    p {
-        font-size: 120px;
     }
 
     #vertical-left {
@@ -134,15 +133,15 @@
 </div>
 <div class = "spacer"></div>
     <div class = "container">
-        <div class = "textBox"><p>X</p></div>
-        <div class = "textBox"><p>O</p></div>
-        <div class = "textBox"></div>
-        <div class = "textBox"></div>
-        <div class = "textBox"><p>X</p></div>
-        <div class = "textBox"></div>
-        <div class = "textBox"><p>O</p></div>
-        <div class = "textBox"></div>
-        <div class = "textBox"><p>X</p></div>
+        <div class = "square"><p id = "top-left" class = "spaces">.</p></div>
+        <div class = "square"><p id = "top-middle" class = "spaces">.</p></div>
+        <div class = "square"><p id = "top-right" class = "spaces">.</p></div>
+        <div class = "square"><p id = "middle-left" class = "spaces">.</p></div>
+        <div class = "square"><p id = "middle-middle" class = "spaces">.</p></div>
+        <div class = "square"><p id = "middle-right" class = "spaces">.</p></div>
+        <div class = "square"><p id = "bottom-left" class = "spaces">.</p></div>
+        <div class = "square"><p id = "bottom-left" class = "spaces">.</p></div>
+        <div class = "square"><p id = "bottom-left" class = "spaces">.</p></div>
     </div>
     
     <div id = "diagonal-top-bottom"></div>
@@ -154,5 +153,33 @@
     <div id = "vertical-middle"></div>
     <div id = "vertical-right"></div>
     
+    <script>
+        let spaces = document.querySelectorAll(".spaces");
+
+        let horizontalTop = document.getElementById("horizontal-top");    
+
+
+
+        let count = 0;
+
+        function placeMarker(e) {
+           if (count % 2 === 0) {
+            e.target.textContent = "O";
+            count++;
+            e.target.removeEventListener("click", placeMarker);
+           } else {
+            e.target.textContent = "X";
+            count++;
+            e.target.removeEventListener("click", placeMarker);
+           }
+        }
+
+        function declareWinner() {
+            horizontalTop.style.display = "inline";
+        }
+
+        spaces.forEach(space => space.addEventListener("click", placeMarker));
+
+    </script>
 </body>
 </html>
