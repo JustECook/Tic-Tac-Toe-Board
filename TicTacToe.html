@@ -24,10 +24,57 @@
         box-shadow: 5px 5px 10px black;
     }
 
+    #diagonal-top-bottom {
+        position: absolute;
+        display: none;
+        top: 425px;
+        width: 750px;
+        height: 10px;
+        background: red;
+        transform: rotate(45deg);
+    }
+
+    #diagonal-bottom-top {
+        position: absolute;
+        display: none;
+        top: 425px;
+        width: 750px;
+        height: 10px;
+        background: red;
+        transform: rotate(-45deg); 
+    }
+
     h1, h2 {
         position: relative;
         padding: 0px;
     }
+
+    #horizontal-bottom {
+        position: absolute;
+        display: none;
+        top: 625px;
+        width: 575px;
+        height: 10px;
+        background: red;
+    }
+
+    #horizontal-middle {
+        position: absolute;
+        display: none;
+        top: 425px;
+        width: 575px;
+        height: 10px;
+        background: red;
+    }
+    #horizontal-top {
+        position: absolute;
+        display: none;
+        top: 225px;
+        width: 575px;
+        height: 10px;
+        background: red;
+    }
+
     .textBox {
         border: 1px solid black;
         height: 200px;
@@ -45,6 +92,39 @@
     p {
         font-size: 120px;
     }
+
+    #vertical-left {
+        position: absolute;
+        display: none;
+        top: 430px;
+        left: 200px;
+        width: 575px;
+        height: 10px;
+        background: red;
+        transform: rotate(90deg);
+    }
+
+    #vertical-middle {
+        position: absolute;
+        display: none;
+        top: 430px;
+        left: 400px;
+        width: 575px;
+        height: 10px;
+        background: red;
+        transform: rotate(90deg);
+    }
+    #vertical-right {
+        position: absolute;
+        display: none;
+        top: 430px;
+        left: 600px;
+        width: 575px;
+        height: 10px;
+        background: red;
+        transform: rotate(90deg);
+    }
+
 </style>
 
 </head>
@@ -64,6 +144,15 @@
         <div class = "textBox"></div>
         <div class = "textBox"><p>X</p></div>
     </div>
+    
+    <div id = "diagonal-top-bottom"></div>
+    <div id = "horizontal-top"></div>
+    <div id = "horizontal-middle"></div>
+    <div id = "horizontal-bottom"></div>
+    <div id = "diagonal-bottom-top"></div>
+    <div id = "vertical-left"></div>
+    <div id = "vertical-middle"></div>
+    <div id = "vertical-right"></div>
     
 </body>
 </html>
